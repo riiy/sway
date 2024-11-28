@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term gnome-terminal
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -22,7 +22,6 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # Application launcher with fzf
 set $fmenu exec $term --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
-
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
