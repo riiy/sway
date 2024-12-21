@@ -65,7 +65,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindcode $mod+40 exec "rofi -modi drun,run -show drun"
     # clipboard tool
     bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-    bindsym $mod+Shift+f exec nautilus
+    bindsym $mod+Shift+f exec dolphin
     # Kill focused window
     bindsym $mod+Shift+q kill
     # Start your fzf launcher
