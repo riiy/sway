@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term gnome-terminal
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -57,7 +57,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Start a terminal
     bindsym $mod+Return exec $term
     # Start chrome
-    bindsym $mod+b exec google-chrome
+    bindsym $mod+b exec google-chrome-stable
     bindsym $mod+c exec 'emacsclient -c'
     # Start launcher
     bindsym $mod+d exec $menu
@@ -213,6 +213,15 @@ bar {
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
+}
+input type:keyboard {
+  # Capslock key should work as escape key
+  # See /usr/share/X11/xkb/rules/xorg.lst for options
+  # xkb_options ctrl:nocaps
+  # xkb_options caps:swayescape
+  xkb_options ctrl:swapcaps
+
+
 }
 
 include ~/.config/sway/config.d/*
