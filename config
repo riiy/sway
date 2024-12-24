@@ -66,7 +66,7 @@ output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg /usr/share/bac
     bindcode $mod+40 exec "rofi -modi drun,run -show drun"
     # clipboard tool
     bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-    bindsym $mod+Shift+f exec dolphin
+    bindsym $mod+Shift+f exec thunar
     # Kill focused window
     bindsym $mod+Shift+q kill
     # Start your fzf launcher
