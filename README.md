@@ -1,7 +1,7 @@
 ## install requirements
 
 ``` shell
-yay -S kitty wofi fzf clipboard grim grimshot mako greenclip
+yay -S kitty alacritty rofi wofi fzf grim grimshot mako greenclip clipboard wl-clipboard xdg-utils cliphist
 
 ```
 

@@ -17,6 +17,7 @@ set $right l
 set $term /usr/bin/kitty
 set $menu wofi --style ~/.config/wofi/style.css --show drun
 
+set $fmenu exec alacritty --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
@@ -55,6 +56,7 @@ output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg /usr/share/bac
     bindsym $mod+c exec 'emacsclient -c'
     # Start launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $fmenu
     # A more modern dmenu replacement is rofi:
     # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
     # clipboard tool
