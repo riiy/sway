@@ -1,0 +1,2 @@
+# ~/.config/mako/config
+on-notify=exec makoctl menu wofi -d -p 'Choose Action: '

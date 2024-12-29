@@ -14,14 +14,14 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term /usr/bin/kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu wofi --style ~/.config/wofi/style.css --show drun
 
 # Application launcher with fzf
-set $fmenu exec alacritty --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
+set $fmenu exec $term --class=launcher bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
@@ -63,7 +63,7 @@ output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg /usr/share/bac
     # Start launcher
     bindsym $mod+d exec $menu
     # A more modern dmenu replacement is rofi:
-    bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+    # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
     # clipboard tool
     bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
     bindsym $mod+Shift+f exec thunar
