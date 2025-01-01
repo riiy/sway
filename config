@@ -14,17 +14,18 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term /usr/bin/kitty
+set $term /usr/bin/alacritty
 set $menu wofi --style ~/.config/wofi/style.css --show drun
 
-set $fmenu exec alacritty --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
+set $fmenu exec $term --class=launcher -e bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+set $wallpapers_path $HOME/.config/sway/wallpapers
+output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg `find $wallpapers_path -type f | shuf -n 1` fill
 
 #
 # Example configuration:
