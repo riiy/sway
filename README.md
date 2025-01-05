@@ -19,3 +19,7 @@ md -p ~/.config/mako && cd ~/.config/mako && ln -s ../sway/mako_config config
 md -p ~/.config/wofi && cd ~/.config/wofi && ln -s ../sway/wofi_style.css style.css && ln -s ../sway/wofi_config config
 md -p ~/.config/alacritty && cd ~/.config/alacritty && ln -s ../sway/alacritty.toml
 ```
+
+``` shell
+cd ~/.config/ && ln -s ./sway/chrome-flags.conf
+```
