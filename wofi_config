@@ -6,7 +6,7 @@ key_exit=Ctrl-g
 key_left=Ctrl-h
 key_right=Ctrl-l
 
-width=750
+width=800
 height=400
 always_parse_args=true
 show_all=false
@@ -15,4 +15,3 @@ hide_scroll=true
 print_command=true
 insensitive=true
 prompt=
-columns=2
