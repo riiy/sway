@@ -22,29 +22,8 @@ set $fmenu exec $term --class=launcher bash -c 'compgen -c | grep -v fzf | sort 
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $wallpapers_path $HOME/.config/sway/wallpapers
 output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg `find $wallpapers_path -type f | shuf -n 1` fill
-
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
 #
@@ -197,8 +176,6 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom
-    mode hide
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%H:%M'; do sleep 1; done
