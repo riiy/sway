@@ -33,7 +33,7 @@ output HDMI-A-1 scale 1.1 mode 2560x1440@74.968Hz position 0 0 bg `find $wallpap
     bindsym $mod+Return exec $term
     # Start chrome
     bindsym $mod+b exec google-chrome-stable
-    bindsym $mod+z exec 'emacsclient -c'
+    bindsym $mod+z exec emacs
     # Start launcher
     bindsym $mod+o exec $menu
     bindsym $mod+Shift+o exec $fmenu
