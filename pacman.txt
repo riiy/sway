@@ -38,6 +38,7 @@ inetutils
 intel-media-driver
 iwd
 kitty
+kodi
 libcurl-gnutls
 libreoffice-fresh
 libva-intel-driver
@@ -51,6 +52,7 @@ lshw
 mako
 man-db
 multimarkdown
+nafe
 nano
 neofetch
 nvidia
